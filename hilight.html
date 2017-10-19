@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实例</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="hilight">哈哈哈哈哈</div>
+    <script>
+        (function ($) {
+            // 插件定义 hilight插件名字
+            $.fn.hilight = function (options) { 
+
+                // 一个新的空对象做为$.extend的第一个参数，defaults和用户传递的参数对象紧随其后，这样做的好处是所有值被合并到这个空对象上，保护了插件里面的默认值。
+                var settings = $.extend({},$.fn.hilight.defaults,options);
+                // 支持链式调用   
+                return this.each(function(){
+                    $(this).css({
+                        "background-color":settings.background,
+                        "color":settings.foreground
+                    })
+                    $.fn.hilight.format($(this).html);
+                })
+            };
+            // 定义暴露format函数
+            $.fn.hilight.format = function (txt) {
+                return '<strong>' + txt + '</strong>';
+            };
+            // 插件的defaults
+            $.fn.hilight.defaults = {
+                foreground: "red",
+                background: "yellow"
+            }
+        })(jQuery)
+        $('.hilight').hilight();
+    </script>
+</body>
+
+</html>

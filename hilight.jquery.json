@@ -1,0 +1,29 @@
+{
+    "name": "Hilight",
+    "title": "Hilight",
+    "description": "高亮插件",
+    "keywords": [
+        "hilight"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "WarriorML",
+         "email": "603658709@qq.com",
+         "url": "https://github.com/WarriorML"
+     },
+    "maintainers": [
+        {
+           "name": "WarriorML",
+            "email": "603658709@qq.com",
+            "url": "https://github.com/WarriorML"
+        }
+    ],
+    "bugs": "https://github.com/WarriorML/HilightPlugin/issues",
+    "homepage": "http://wayou.github.io/HilightPlugin/",
+    "docs": "http://wayou.github.io/HilightPlugin/",
+    "demo":"http://wayou.github.io/HilightPlugin/",
+    "download": "https://github.com/WarriorML/HilightPlugin/master",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
